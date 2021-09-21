@@ -68,24 +68,6 @@ select {
 
 /* ###### [/] Normalize.css ###### */
 
-/* ###### FONTS ###### */
-@font-face {
-  font-family: 'Agipo Bold Cond';
-  src: url('../fonts/AgipoBoldCond.woff2') format('woff2'),
-      url('../fonts/AgipoBoldCond.woff') format('woff');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Vesterbro Variable';
-  src: url('VesterbroVariable-Regular.woff2') format('woff2'),
-      url('VesterbroVariable-Regular.woff') format('woff');
-  font-weight: 100 900;
-  font-display: swap;
-  font-style: normal;
-}
 
 * {
   -webkit-font-smoothing: antialiased;
@@ -96,7 +78,7 @@ select {
 /* ###### VARIABLES ###### */
 :root {
   --color-dark: #1e1e1e;
-  --color-light: #E1DAD4;
+  --color-light: #f7f7fa;
   --color-brand: #EB0609;
   --base-size: 16px;
   --duration: 90s;
@@ -109,12 +91,9 @@ html,body{
   height:100%;
 }
 body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   background: var(--color-light);
   color: var(--color-dark);
-
-  font-family: 'Vesterbro Variable', sans-serif;
-  font-variation-settings: 'wght' 100.0;
-  font-size: var(--base-size);
 }
 /* ###### [/] DEFAULT STYLES ###### */
 
@@ -127,6 +106,7 @@ body {
   margin-bottom: 4rem; 
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .logo{
@@ -178,9 +158,6 @@ body {
   --scaler: 10vw;
 
   font-size: clamp( var(--minFontSize), var(--scaler), var(--maxFontSize) );
-  font-family: 'Agipo', sans-serif;
-  font-weight: 700;
-  line-height: 95%;
   
   letter-spacing: -0.175rem;
   margin-bottom: 0.75rem;
@@ -202,4 +179,9 @@ a{
   body{
     padding: 3rem;
   }
+}
+
+
+strong{
+  text-transform: uppercase;
 }
